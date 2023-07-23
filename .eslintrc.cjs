@@ -1,26 +1,29 @@
 module.exports = {
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
     node: true
   },
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:prettier/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'react-refresh', 'prettier'],
   rules: {
-    // 0 关闭 1 警告 2 错误
-    'react-refresh/only-export-components': 1, // 检查是否有导出组件
+    '@typescript-eslint/no-explicit-any': 'off', // 禁止使用any
+    '@typescript-eslint/no-empty-interface': 'off', // 禁止空接口
     'no-fallthrough': [0], // 禁止 case 语句落空
-    '@typescript-eslint/no-empty-function': 1,
-    'linebreak-style': [0, 'error', 'lf'] // 换行符使用 lf
+    '@typescript-eslint/no-var-requires': 'off' // 禁止使用 var
   }
 };

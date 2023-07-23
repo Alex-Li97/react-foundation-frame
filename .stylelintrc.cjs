@@ -1,12 +1,16 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-prettier',
+    'stylelint-config-prettier'
+  ],
   plugins: ['stylelint-order'],
   rules: {
     'no-irregular-whitespace': true,
     'no-eol-whitespace': true,
     'declaration-colon-space-after': ['always'], // 在冒号后指定一个空格
-    // 颜色指定大写
-    'color-hex-case': 'upper',
+    // 颜色指定小写字母
+    'color-hex-case': 'lower',
     // 禁止空块
     'block-no-empty': true,
     // 颜色6位长度
