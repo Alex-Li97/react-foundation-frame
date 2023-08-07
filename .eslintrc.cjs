@@ -24,6 +24,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off', // 禁止使用any
     '@typescript-eslint/no-empty-interface': 'off', // 禁止空接口
     'no-fallthrough': [0], // 禁止 case 语句落空
-    '@typescript-eslint/no-var-requires': 'off' // 禁止使用 var
+    '@typescript-eslint/no-var-requires': 'off', // 禁止使用 var
+    '@typescript-eslint/no-unused-vars': 'error' // 禁止未使用过的变量
   }
 };
